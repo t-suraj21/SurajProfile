@@ -1,0 +1,84 @@
+/* About Section Toggle Button */
+.about-toggle-container {
+  text-align: center;
+  margin: 0 0;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.about-toggle-btn {
+  background-color: #f39c12;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.about-toggle-btn:hover {
+  background-color: #d35400;
+}
+
+/* Sliding About Section */
+.about-section {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+  background: linear-gradient(135deg, #34495e, #2c3e50);
+  color: #fff;
+  padding: 0 20px;
+}
+
+.about-section.visible {
+  max-height: 100vh;
+  padding: 40px 20px;
+}
+
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #f39c12;
+}
+
+.about-content p {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  line-height: 1.8;
+}
+
+.about-content .highlight {
+  color: #f39c12;
+  font-style: italic;
+}
+
+.about-content .btn {
+  text-decoration: none;
+  color: #fff;
+  background-color: #f39c12;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.about-content .btn:hover {
+  background-color: #d35400;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-content h1 {
+    font-size: 2rem;
+  }
+
+  .about-content p {
+    font-size: 1rem;
+  }
+}

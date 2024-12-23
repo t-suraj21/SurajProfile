@@ -1,0 +1,79 @@
+/* General Footer Styling */
+.footer {
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.footer-text {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #aaa;
+}
+
+/* Social Links Styling */
+.social-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 0;
+}
+
+.social-link {
+  text-decoration: none;
+  font-size: 2rem;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Neon Effect */
+.neon-link {
+  color: #ffffff;
+  text-shadow: 0 0 5px #00ffeabd, 0 0 10px #00ffeada, 0 0 20px #00ffea,
+    0 0 40px #00ffea, 0 0 80px #00ffea;
+}
+
+.neon-link:hover {
+  color: #ffffff;
+  text-shadow: 0 0 5px #ff006e, 0 0 10px #ff006e, 0 0 20px #ff006e,
+    0 0 40px #ff006e, 0 0 80px #ff006e;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.footer-credit {
+  color: #aaa;
+  font-size: 0.9rem;
+}
+@media (max-width: 768px){
+
+  .neon-link {
+    color: #ffffff;
+    text-shadow: 0 0 5px #00ffeabd, 0 0 10px #00ffeada, 0 0 20px #00ffea,
+      0 0 40px #00ffea, 0 0 80px #00ffea;
+  }
+  
+  .neon-link:hover {
+    color: #ffffff;
+    text-shadow: 0 0 5px #ff006e, 0 0 10px #ff006e, 0 0 20px #ff006e,
+      0 0 40px #ff006e, 0 0 80px #ff006e;
+  }
+}
