@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Navbar.css";
+import "@fortawesome/fontawesome-free/css/all.css";
 
 const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -19,23 +20,33 @@ const Navbar = () => {
         {/* Links */}
         <ul className={`navbar-links ${isMobile ? "active" : ""}`}>
           <li>
-            <a href="#home" onClick={() => setIsMobile(false)}>
+            <a href="#home" onClick={() => setIsMobile(false)} className="neon-link">
               Home
             </a>
           </li>
           <li>
-            <a href="#about" onClick={() => setIsMobile(false)}>
+            <a href="#about" onClick={() => setIsMobile(false)} className="neon-link">
               About
             </a>
           </li>
           <li>
-            <a href="#projects" onClick={() => setIsMobile(false)}>
+            <a href="#projects" onClick={() => setIsMobile(false)} className="neon-link">
               Projects
             </a>
           </li>
           <li>
-            <a href="#contact" onClick={() => setIsMobile(false)}>
+            <a href="#contact" onClick={() => setIsMobile(false)} className="neon-link">
               Contact
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/t-suraj21"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="neon-link"
+            >
+              <i className="fab fa-github"></i> GitHub
             </a>
           </li>
         </ul>
