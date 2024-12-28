@@ -1,65 +1,51 @@
-import React, { useState } from "react";
-import "./Navbar.css";
-import "@fortawesome/fontawesome-free/css/all.css";
+import React from "react";
+import { Search, Menu } from "lucide-react";
+import "./Navbar.css"; // Optional CSS file for styling
 
-const Navbar = () => {
-  const [isMobile, setIsMobile] = useState(false);
+const NavBar = () => {
+  const menuItems = [
+    "Home",
+    "Create",
+    "Plans",
+    "Our Story",
+    "Contact",
+    "Learn & Support",
+  ];
 
-  const toggleMobileMenu = () => {
-    setIsMobile(!isMobile);
-  };
+  const formatLink = (item) =>
+    `/${item.toLowerCase().replace(/ & /g, "-").replace(/ /g, "-")}`;
 
   return (
     <nav className="navbar">
-      <div className="navbar-container">
-        {/* Logo */}
-        <div className="navbar-logo">
-          <a href="#home">Suraj Kumar</a>
-        </div>
+      {/* Logo */}
+      <a href="/" className="navbar-logo">
+        SURAJ
+      </a>
 
-        {/* Links */}
-        <ul className={`navbar-links ${isMobile ? "active" : ""}`}>
-          <li>
-            <a href="#home" onClick={() => setIsMobile(false)} className="neon-link">
-              Home
-            </a>
-          </li>
-          <li>
-            <a href="#about" onClick={() => setIsMobile(false)} className="neon-link">
-              About
-            </a>
-          </li>
-          <li>
-            <a href="#projects" onClick={() => setIsMobile(false)} className="neon-link">
-              Projects
-            </a>
-          </li>
-          <li>
-            <a href="#contact" onClick={() => setIsMobile(false)} className="neon-link">
-              Contact
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://github.com/t-suraj21"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="neon-link"
-            >
-              <i className="fab fa-github"></i> GitHub
-            </a>
-          </li>
-        </ul>
+      {/* Desktop Menu */}
+      <div className="navbar-links">
+        {menuItems.map((item) => (
+          <a
+            key={item}
+            href={formatLink(item)}
+            className="navbar-link"
+          >
+            {item}
+          </a>
+        ))}
+      </div>
 
-        {/* Hamburger Icon */}
-        <div className="hamburger" onClick={toggleMobileMenu}>
-          <span className="line"></span>
-          <span className="line"></span>
-          <span className="line"></span>
-        </div>
+      {/* Icons */}
+      <div className="navbar-icons">
+        <button className="icon-button">
+          <Search className="icon" />
+        </button>
+        <button className="icon-button">
+          <Menu className="icon" />
+        </button>
       </div>
     </nav>
   );
 };
 
-export default Navbar;
+export default NavBar;

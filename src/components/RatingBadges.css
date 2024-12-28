@@ -1,0 +1,35 @@
+.rating-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between avatars and rating */
+  }
+  
+  .avatars {
+    display: flex;
+    position: relative;
+  }
+  
+  .avatar {
+    width: 40px;
+    height: 40px;
+    border: 2px solid black;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: -8px; /* Overlap the avatars */
+  }
+  
+  .avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .rating {
+    background-color: #4caf50; /* Green color */
+    color: black;
+    padding: 5px 12px;
+    border-radius: 9999px; /* Full rounded */
+    font-size: 0.875rem; /* Small font size */
+    font-weight: bold;
+  }
+  

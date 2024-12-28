@@ -1,30 +1,68 @@
 import React from "react";
-import "./Hero.css";
+import { ArrowUpRight, Sparkles, MoveRight } from "lucide-react";
+import RatingBadge from "./rating-badages";
+import "./Hero.css"; // Optional CSS for styling
 
 const Hero = () => {
   return (
-    <section className="hero">
+    <div className="hero-container">
       <div className="hero-content">
-        <div className="hero-text">
-          <h1 className="hero-title">
-            Welcome, To the Dev Life  of <span className="highlight">Suraj</span>
-          </h1>
-          <p className="hero-description">
-            A passionate Full-Stack Web Developer and problem solver, dedicated
-            to crafting elegant and responsive web solutions that enhance user
-            experiences.
-          </p>
-          <div className="hero-buttons">
-            <a href="#projects" className="btn">
-              Explore Projects
-            </a>
-            <a href="#contact" className="btn btn-outline">
-              Get in Touch
-            </a>
+        {/* Removed NavBar */}
+
+        <div className="hero-grid">
+          {/* Left Section */}
+          <div className="hero-text">
+            <div className="relative">
+              <ArrowUpRight className="icon-arrow" />
+              <h1 className="hero-title">
+                Building
+                <br />
+                Digital Experiences
+                <br />
+                <span className="highlight">with Purpose</span>
+                <br />
+              </h1>
+            </div>
+
+            <div className="hero-details">
+              <p className="hero-description">Explore My Journey in Design and Development</p>
+              <RatingBadge />
+            </div>
+          </div>
+
+          {/* Right Section */}
+          <div className="hero-image-container">
+            <div className="relative">
+              <img src="/heroimg.png" alt="Professional portrait" className="hero-image"/>
+            </div>
+          </div>
+        </div>
+
+        {/* Additional Info Section */}
+        <div className="cta-box">
+          <div className="cta-header">
+            <ArrowUpRight className="cta-icon" />
+            <p className="cta-text">
+              A modern agency with new solutions for creating websites.
+            </p>
+          </div>
+          <button className="cta-button">
+            <Sparkles className="cta-sparkle" />
+            <span>Start Discovery</span>
+          </button>
+          <div className="cta-book-now">Book Now</div>
+        </div>
+
+        {/* Scroll Indicator */}
+        <div className="scroll-indicator">
+          <span>Scroll to</span>
+          <span>explore</span>
+          <div className="scroll-circle">
+            <div className="scroll-dot" />
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
