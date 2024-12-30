@@ -1,5 +1,5 @@
 .hero-container {
-  min-height: 100vh;
+  min-height: 80vh;
   background-color: #000;
   color: #fff;
   padding: 24px;
@@ -16,7 +16,20 @@
   gap: 32px;
   margin-top: 48px;
 }
+.cta-button {
+  display: flex;
+  align-items: center;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
 
+.cta-button:hover {
+  background-color: #0056b3;
+}
 @media (min-width: 1024px) {
   .hero-grid {
     grid-template-columns: 1fr 1fr;

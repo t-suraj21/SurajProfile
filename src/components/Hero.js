@@ -1,5 +1,6 @@
 import React from "react";
-import { ArrowUpRight, Sparkles, MoveRight } from "lucide-react";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
+import { ArrowUpRight, Sparkles } from "lucide-react";
 import RatingBadge from "./rating-badages";
 import "./Hero.css"; // Optional CSS for styling
 
@@ -13,7 +14,6 @@ const Hero = () => {
           {/* Left Section */}
           <div className="hero-text">
             <div className="relative">
-              <ArrowUpRight className="icon-arrow" />
               <h1 className="hero-title">
                 Building
                 <br />
@@ -33,7 +33,7 @@ const Hero = () => {
           {/* Right Section */}
           <div className="hero-image-container">
             <div className="relative">
-              <img src="/heroimg.png" alt="Professional portrait" className="hero-image"/>
+              <img src="/heroimg.png" alt="Professional portrait" className="hero-image" />
             </div>
           </div>
         </div>
@@ -46,11 +46,10 @@ const Hero = () => {
               A modern agency with new solutions for creating websites.
             </p>
           </div>
-          <button className="cta-button">
+          <Link to="/contact" className="cta-button">
             <Sparkles className="cta-sparkle" />
-            <span>Start Discovery</span>
-          </button>
-          <div className="cta-book-now">Book Now</div>
+            <span>Contact Me!</span>
+          </Link>
         </div>
 
         {/* Scroll Indicator */}

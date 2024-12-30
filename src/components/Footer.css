@@ -1,79 +1,77 @@
-/* General Footer Styling */
-.footer {
-  background: rgba(0, 0, 0, 0.75);
+/* Footer Container */
+.footer-container {
+  background-color: #1a1a1a;
   color: #fff;
-  padding: 40px 20px;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.footer-content div {
+  flex: 1;
+  margin: 1rem;
   text-align: center;
 }
 
-.footer-container {
-  max-width: 1200px;
-  margin: 0 auto;
+.footer-about h3,
+.footer-social h3,
+.footer-contact h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #ff9800;
 }
 
-.footer-title {
-  font-size: 2rem;
-  margin-bottom: 10px;
-  color: #fff;
-}
-
-.footer-text {
+.footer-about p,
+.footer-contact p {
   font-size: 1rem;
-  margin-bottom: 20px;
-  color: #aaa;
+  line-height: 1.6;
 }
 
-/* Social Links Styling */
 .social-links {
   list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
   padding: 0;
+  margin: 0;
 }
 
-.social-link {
+.social-links li {
+  margin: 0.5rem 0;
+}
+
+.social-links a {
+  color: #ff9800;
   text-decoration: none;
-  font-size: 2rem;
-  color: #fff;
-  transition: all 0.3s ease-in-out;
+  font-size: 1.1rem;
 }
 
-/* Neon Effect */
-.neon-link {
-  color: #ffffff;
-  text-shadow: 0 0 5px #00ffeabd, 0 0 10px #00ffeada, 0 0 20px #00ffea,
-    0 0 40px #00ffea, 0 0 80px #00ffea;
+.social-links a:hover {
+  text-decoration: underline;
 }
 
-.neon-link:hover {
-  color: #ffffff;
-  text-shadow: 0 0 5px #ff006e, 0 0 10px #ff006e, 0 0 20px #ff006e,
-    0 0 40px #ff006e, 0 0 80px #ff006e;
-}
-
-/* Footer Bottom */
 .footer-bottom {
-  margin-top: 20px;
+  border-top: 1px solid #333;
+  padding-top: 1rem;
+  text-align: center;
   font-size: 0.9rem;
-  color: #666;
-}
-
-.footer-credit {
   color: #aaa;
-  font-size: 0.9rem;
 }
-@media (max-width: 768px){
 
-  .neon-link {
-    color: #ffffff;
-    text-shadow: 0 0 5px #00ffeabd, 0 0 10px #00ffeada, 0 0 20px #00ffea,
-      0 0 40px #00ffea, 0 0 80px #00ffea;
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
   }
-  
-  .neon-link:hover {
-    color: #ffffff;
-    text-shadow: 0 0 5px #ff006e, 0 0 10px #ff006e, 0 0 20px #ff006e,
-      0 0 40px #ff006e, 0 0 80px #ff006e;
+
+  .footer-content div {
+    margin-bottom: 1rem;
   }
 }

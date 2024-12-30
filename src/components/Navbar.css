@@ -2,60 +2,103 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  padding: 16px 32px;
-  background-color: #111;
+  padding: 1rem 2rem;
+  background-color: #333;
+  color: #fff;
+  position: relative;
 }
 
 .navbar-logo {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #fff;
   text-decoration: none;
+  color: #fff;
 }
 
 .navbar-links {
-  display: none;
+  display: flex;
+  gap: 2rem;
 }
 
 .navbar-link {
-  color: #ccc;
   text-decoration: none;
-  font-size: 1rem;
-  margin-left: 16px;
-  transition: color 0.3s;
+  color: #fff;
+  font-size: 1.1rem;
 }
 
 .navbar-link:hover {
-  color: #fff;
+  color: #ffcc00;
 }
 
 .navbar-icons {
   display: flex;
-  align-items: center;
-  gap: 16px;
+  gap: 1rem;
 }
 
 .icon-button {
-  background: none;
+  background: transparent;
   border: none;
-  color: #ccc;
   cursor: pointer;
-  transition: color 0.3s;
-}
-
-.icon-button:hover {
-  color: #fff;
 }
 
 .icon {
-  width: 20px;
-  height: 20px;
+  font-size: 1.3rem;
+  color: #fff;
 }
 
-/* Responsive Design */
-@media (min-width: 768px) {
+.icon-button:hover .icon {
+  color: #ffcc00;
+}
+
+/* Hide menu items and hamburger on small screens */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none; /* Hide links by default */
+    flex-direction: column;
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 1rem;
+  }
+
+  .navbar-links.active {
+    display: flex; /* Show menu when hamburger is clicked */
+  }
+
+  .navbar-icons {
+    display: flex;
+    gap: 1rem;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+  }
+
+  /* Show only the hamburger icon on small screens */
+  .hamburger-icon {
+    display: block;
+  }
+
+  .navbar-links a {
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  /* Hide the desktop menu and icon on small screens */
+  .navbar-links {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  /* Desktop: Show the menu items and hide hamburger */
   .navbar-links {
     display: flex;
+  }
+
+  .hamburger-icon {
+    display: none; /* Hide hamburger on desktop */
   }
 }

@@ -1,29 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import { Search, Menu } from "lucide-react";
 import "./Navbar.css"; // Optional CSS file for styling
 
 const NavBar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const menuItems = [
     "Home",
-    "Create",
-    "Plans",
-    "Our Story",
-    "Contact",
-    "Learn & Support",
+    "About Me",
+    "Projects",
+    "Blog",
   ];
 
   const formatLink = (item) =>
-    `/${item.toLowerCase().replace(/ & /g, "-").replace(/ /g, "-")}`;
+    `/${item.toLowerCase().replace(/ /g, "-")}`;
+
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
     <nav className="navbar">
       {/* Logo */}
       <a href="/" className="navbar-logo">
-        SURAJ
+        Suraj Kumar
       </a>
 
       {/* Desktop Menu */}
-      <div className="navbar-links">
+      <div className={`navbar-links ${isMenuOpen ? "active" : ""}`}>
         {menuItems.map((item) => (
           <a
             key={item}
@@ -40,7 +42,9 @@ const NavBar = () => {
         <button className="icon-button">
           <Search className="icon" />
         </button>
-        <button className="icon-button">
+
+        {/* Show hamburger icon only on small screens */}
+        <button className="icon-button hamburger-icon" onClick={toggleMenu}>
           <Menu className="icon" />
         </button>
       </div>

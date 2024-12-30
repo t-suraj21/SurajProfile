@@ -1,64 +1,59 @@
 import React from "react";
-import "./Footer.css";
-import "@fortawesome/fontawesome-free/css/all.css";
+import "./Footer.css"; // Custom CSS for styling
 
 const Footer = () => {
   return (
-    <footer className="footer">
-      <div className="footer-container">
-        <div className="footer-content">
-          <h2 className="footer-title">Let's Connect!</h2>
-          <p className="footer-text">
-            Feel free to reach out to me on any of these platforms.
+    <footer className="footer-container">
+      {/* Footer Content */}
+      <div className="footer-content">
+        {/* About Me */}
+        {/* <div className="footer-about">
+          <h3>About Me</h3>
+          <p>
+            Hi, I'm Suraj Kumar, a passionate web developer and designer. I love creating
+            intuitive user experiences and exploring new technologies to solve real-world problems.
           </p>
+        </div> */}
+
+        {/* Social Links */}
+        <div className="footer-social">
+          <h3>Follow Me</h3>
           <ul className="social-links">
             <li>
-              <a
-                href="https://www.linkedin.com/in/suraj-kumar/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="social-link neon-link"
-              >
-                <i className="fab fa-linkedin"></i>
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                GitHub
               </a>
             </li>
             <li>
-              <a
-                href="https://github.com/t-suraj21"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="social-link neon-link"
-              >
-                <i className="fab fa-github"></i>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                LinkedIn
               </a>
             </li>
             <li>
-              <a
-                href="https://twitter.com/surajkumar"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="social-link neon-link"
-              >
-                <i className="fab fa-twitter"></i>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                Twitter
               </a>
             </li>
             <li>
-              <a
-                href="https://www.instagram.com/t_suraj21/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="social-link neon-link"
-              >
-                <i className="fab fa-instagram"></i> {/* Updated icon */}
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                Instagram
               </a>
             </li>
           </ul>
         </div>
-        <div className="footer-bottom">
-          <p className="footer-credit">
-            © {new Date().getFullYear()} Suraj Kumar. All rights reserved.
-          </p>
+
+        {/* Contact Info */}
+        <div className="footer-contact">
+          <h3>Contact Me</h3>
+          <p>Email: surajkumar@example.com</p>
+          <p>Phone: +91 12345-67890</p>
+          <p>Location: India</p>
         </div>
+      </div>
+
+      {/* Copyright Section */}
+      <div className="footer-bottom">
+        <p>© 2024 Suraj Kumar. All rights reserved.</p>
       </div>
     </footer>
   );
