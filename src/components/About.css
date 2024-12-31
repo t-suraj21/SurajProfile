@@ -1,7 +1,7 @@
 /* General Container */
 .about-container {
   font-family: "Arial", sans-serif;
-  color: #333;
+  color:rgb(255, 255, 255);
   padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
@@ -28,7 +28,7 @@
 
 .arrow {
   font-size: 1.5rem;
-  color: #555;
+  color: #ffffff;
 }
 
 .about-description {
@@ -46,7 +46,7 @@
 
 .service-item {
   text-decoration: none;
-  color: black;
+  color: rgb(255, 255, 255);
   font-size: 1.2rem;
   display: flex;
   align-items: center;
@@ -76,7 +76,7 @@
 .circle-logo {
   width: 80px;
   height: 80px;
-  border: 2px solid #333;
+  border: 2px solid #f6ff00;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -87,7 +87,7 @@
 
 .agency-name {
   font-size: 0.9rem;
-  color: #555;
+  color: #ffffff;
 }
 
 /* Work Section */
@@ -100,7 +100,7 @@
   max-width: 700px;
   margin: 0 auto;
   font-size: 1rem;
-  color: #555;
+  color: #ffffff;
 }
 
 /* Footer */

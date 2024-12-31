@@ -39,7 +39,7 @@ export default function About() {
       </section>
 
       {/* Footer */}
-      <footer className="about-footer">© 2023-PRESENT</footer>
+      {/* <footer className="about-footer">© 2023-PRESENT</footer> */}
     </div>
   );
 }

@@ -1,6 +1,6 @@
 .hero-container {
   min-height: 80vh;
-  background-color: #000;
+ 
   color: #fff;
   padding: 24px;
 }
@@ -34,6 +34,9 @@
   .hero-grid {
     grid-template-columns: 1fr 1fr;
   }
+  .hero-image{
+    margin-right: 200px;
+  }
 }
 
 .hero-title {
@@ -63,7 +66,7 @@
 .hero-image {
   width: 365px;
   border-radius: 8px;
-  background-color: #f97316;
+  /* background-color: #f97316; */
 }
 
 .info-box {
@@ -97,7 +100,7 @@
   background-color: #6b21a8;
   padding: 32px;
   border-radius: 8px;
-  max-width: 640px;
+  max-width: 400px;
 }
 
 .cta-header {
