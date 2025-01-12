@@ -1,0 +1,82 @@
+/* Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000; /* Black color */
+  padding: 1rem 2rem;
+  color: #fff;
+  position: relative; /* To enable centering the hamburger */
+}
+
+/* Logo Styling */
+.navbar-logo a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Links */
+.navbar-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.navbar-links li a:hover {
+  color: #f39c12;
+}
+
+/* Mobile Menu */
+.navbar-links-mobile {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  background-color: #333;
+  padding: 1rem;
+  border-radius: 8px;
+  list-style: none;
+}
+
+.navbar-links-mobile li {
+  margin: 10px 0;
+}
+
+/* Toggle Button */
+.navbar-toggle {
+  display: none;
+  background: none;
+  color: #fff;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+  }
+
+  .navbar-toggle {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the hamburger icon */
+  }
+
+  .navbar-links a {
+    color: white;
+    text-decoration: none;
+  }
+}

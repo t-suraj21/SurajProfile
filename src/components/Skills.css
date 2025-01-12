@@ -1,0 +1,88 @@
+/* Container */
+.skill-list-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* height: 120px; */
+    width: 100%;
+    overflow: hidden;
+    background-color: #0d1117;
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Shadow Effects */
+  .shadow-left,
+  .shadow-right {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    pointer-events: none;
+    z-index: 2;
+    background: linear-gradient(to right, #0d1117, transparent);
+  }
+  
+  .shadow-right {
+    right: 0;
+    background: linear-gradient(to left, #0d1117, transparent);
+  }
+  
+  /* Marquee Container */
+  .marquee {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+  }
+  
+  /* Marquee Animation */
+  .marquee-content {
+    display: flex;
+    animation: scrollMarquee 25s linear infinite;
+  }
+  
+  @keyframes scrollMarquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+  /* Skill Item */
+  .skill-item {
+    font-size: 2.3rem;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+    margin: 0 2rem;
+    color: #ffcc00;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    transition: transform 0.3s ease;
+  }
+  
+  .skill-item:hover {
+    transform: scale(1.2);
+    color: #ffd700;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.9);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .skill-item {
+      font-size: 1.2rem;
+      margin: 0 1.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .skill-item {
+      font-size: 2.3rem;
+      margin: 0 1rem;
+    }
+  }
+  
